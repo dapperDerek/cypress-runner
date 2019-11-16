@@ -11,6 +11,7 @@
     "cy:run": "node cypress-runner.js -m run",
     "lint-staged": "npx lint-staged"
   },
+  "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": "eslint --fix",
     "*.json": "eslint --fix"
