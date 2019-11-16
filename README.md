@@ -1,4 +1,4 @@
-# cypress-boilerplate
+# cypress-runner
 A boilerplate for using the Cypress module API to perform actions before, during, and after test runs. Includes some extra goodies such as path aliasing and eslint configuration.
 
 ## Installation
