@@ -34,7 +34,7 @@ It is recommended that you **DO NOT** forcefully interrupt Cypress from the comm
 
 ## Notes
 ### How we use the Cypress Module API
-Our boilerplate makes use of the [Cypress Module API](https://docs.cypress.io/guides/guides/module-api.html) to open and run Cypress. This allows us more granular control of Cypress before, during, and after our test suite runs. We use this additional control to backup and restore our database, clean up residual test reports, and generate new test reports.
+Our boilerplate makes use of the [Cypress Module API](https://docs.cypress.io/guides/guides/module-api.html) to open and run Cypress. This allows us more granular control of Cypress before, during, and after our test suite runs. We use this additional control to clean up residual test reports and generate new test reports.
 
 ### Why running Cypress in CLI mode still opens the browser
 Since we use Chrome as our default browser and Cypress does not yet support running Chrome headlessly, even running through the CLI will cause the Chrome browser to launch.
