@@ -1,0 +1,67 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "cypress/globals": true
+    },
+    "plugins": [
+        "cypress",
+        "json",
+        "chai-friendly"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:cypress/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "arrow-parens": ["error", "as-needed"], // Arrow functions can omit parentheses when they have exactly one
+        // parameter.
+        "arrow-spacing": ["error"],
+        "array-bracket-spacing": ["error", "always", // [ 1, 2 ]
+            {
+                "arraysInArrays": false, // [[ 1, 2 ], 2, [ 3, 4 ]] instead of [ [ 1, 2 ], 2, [ 3, 4 ] ]
+                "objectsInArrays": false, // [{ 'foo': 'bar' }] instead of [ { 'foo': 'bar' } ]
+                "singleValue": false // [0] instead of [ 0 ]
+            }
+        ],
+        "block-spacing": ["error", "always"], // This rule enforces consistent spacing inside an open block token and
+        // the next token on the same line.
+        "chai-friendly/no-unused-expressions": 2,
+        "eol-last": ["error", "always"], // require newlines at the end of files
+        "indent": ["error", 2],
+        "linebreak-style": ["error", "unix"],
+        "no-console": ["error"],
+        "no-duplicate-imports": ["error"],
+        "no-multiple-empty-lines": ["error"],
+        "no-trailing-spaces": ["error"], // Cleans up unneeded spacing
+        "no-unused-expressions": 0, // turned off as the chai friendly version is used above
+        "object-curly-spacing": ["error","always"], // { User, AdminUser } instead of {User, AdminUser}
+        "padding-line-between-statements": ["error", // Properly blank lines help developers to understand the code.
+            {"blankLine": "always", "prev": "*", "next": "return"}, // Always have a blank line before a return
+            {"blankLine": "never", "prev": ["function", "multiline-block-like"], "next": "*"}, // Keep lines around functions
+            {"blankLine": "always", "prev": ["const", "let", "var"], "next": "*"}, // Force a new line after variable
+            // declaration
+            {"blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]} // Allow variable
+            // declarations together
+        ],
+        "prefer-object-spread": ["error"], // Object.assign(...foo) instead of Object.assign({}, foo). Introduced in
+        // ES2018, object spread is a declarative alternative which may perform better than the more dynamic,
+        // imperative Object.assign.
+        "quotes": ["error", "double", { "allowTemplateLiterals": true }], // "" instead of ''
+        "semi": ["error", "never"], // Don't use semicolons aka ;
+        "sort-imports": ["error"],
+        "space-in-parens": ["error", "never"], // foo('bar') instead of foo( 'bar' )
+        "space-infix-ops": ["error"], // a ? b : c instead of a?b:c
+        "spaced-comment": ["error"]
+    }
+}

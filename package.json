@@ -1,0 +1,35 @@
+{
+  "name": "cypress-runner",
+  "version": "1.0.0",
+  "description": "A boilerplate for using the Cypress module API",
+  "main": "index.js",
+  "repository": "https://github.com/dapperDerek/cypress-runner.git",
+  "author": "Derek Campbell <campbellderekj@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "cy:open": "node cypress-runner.js -m open",
+    "cy:run": "node cypress-runner.js -m run",
+    "lint-staged": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix",
+    "*.json": "eslint --fix"
+  },
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^2.1.1",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "cypress": "^3.6.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-cypress": "^2.7.0",
+    "eslint-plugin-json": "^1.4.0",
+    "fs-extra": "^8.1.0",
+    "lint-staged": "^10.0.0-1",
+    "mocha": "5.2.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.1.0",
+    "ora": "^4.0.3",
+    "yargs": "^14.2.0"
+  }
+}

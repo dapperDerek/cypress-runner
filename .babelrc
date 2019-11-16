@@ -1,0 +1,11 @@
+{
+    "plugins": [
+      ["module-resolver", {
+        "alias": {
+          "~fixtures": "./cypress/fixtures",
+          "~support": "./cypress/support"
+        },
+        "extensions": [".js", ".json"]
+      }]
+    ]
+  }
